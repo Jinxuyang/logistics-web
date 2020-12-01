@@ -1,17 +1,18 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Test from '@/views/test/Test'
 import Login from '@/components/Login/Login'
 import Index from '@/views/index/Index'
 import Home from '@/components/home/Home'
 import Order from '@/views/order/Order'
 import My from '@/views/my/My'
+import Path from '@/views/Path/Path'
 
 Vue.use(VueRouter)
 
 const routes = [
+  { path: '/', redirect: 'login' },
   {
-    path: '/',
+    path: '/home',
     name: Home,
     component: Home,
     redirect: '/index',
@@ -22,11 +23,6 @@ const routes = [
     ]
   },
   {
-    path: '/test',
-    name: 'Test',
-    component: Test
-  },
-  {
     path: '/login',
     name: 'Login',
     component: Login
@@ -35,6 +31,10 @@ const routes = [
     path: '/index',
     name: 'Index',
     component: Index
+  }, {
+    path: '/path',
+    name: 'Path',
+    component: Path
   }
 ]
 

@@ -19,12 +19,15 @@ import {
   Card,
   Dialog,
   Picker,
-  Notify
+  Notify,
+  Step,
+  Steps
 } from 'vant'
 
 import axios from 'axios'
 axios.defaults.baseURL = 'http://localhost:8400/'
 axios.defaults.withCredentials = true
+/* axios.defaults.withCredentials = false */
 Vue.prototype.$http = axios
 
 Vue.use(Field)
@@ -45,6 +48,8 @@ Vue.use(Card)
 Vue.use(Dialog)
 Vue.use(Picker)
 Vue.use(Notify)
+Vue.use(Step)
+Vue.use(Steps)
 
 Vue.config.productionTip = false
 

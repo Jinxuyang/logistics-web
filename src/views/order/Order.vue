@@ -68,9 +68,9 @@ export default {
       this.$http.put('/order/update/' + this.temp.id, this.temp, { headers: { 'Content-Type': 'application/json' } }).then(res => {
         if (res.data.status === 'success') {
           this.temp = null
-          this.$notify('完成')
+          this.$notify({ type: 'success', message: '成功' })
         } else {
-          this.$notify('失败')
+          this.$notify({ type: 'danger', message: '失败' })
         }
         console.log(res)
       })
